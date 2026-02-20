@@ -834,6 +834,11 @@ form textarea:focus {
         gap: 1.5rem;
     }
 
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
     .hero {
         padding-top: calc(var(--navbar-height) + 2rem);
         min-height: 100vh;
@@ -878,6 +883,10 @@ form textarea:focus {
     .service-card {
         margin: 0 0.5rem;
         padding: 1.5rem;
+    }
+
+    .testimonial-card {
+        padding: 2rem 1.5rem;
     }
 
     .portfolio-filters {
