@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spencer Digital - Instagram</title>
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Spencer Development & Solutions">
+    <meta property="og:description" content="🚀 Transformando ideias em realidade digital. Dev Software & Design Criativo.">
+    <meta property="og:image" content="../img/logo-spencer-8.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Spencer Digital Portfolio">
+
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Sacramento&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="html2canvas.min.js"></script>
+</head>
+<body>
+    <div class="background-glow">
+        <div class="glow-blob blob-1"></div>
+        <div class="glow-blob blob-2"></div>
+        <div class="glow-blob blob-3"></div>
+        <div class="glow-blob blob-4"></div>
+    </div>
+    <div class="glass-container">
+        <!-- Sidebar / Navigation -->
+        <nav class="sidebar">
+            <div class="logo">
+                <i class="fab fa-instagram"></i>
+                <span>Spencer</span>
+            </div>
+            <ul class="nav-items">
+                <li class="active"><i class="fas fa-home"></i> <span>Home</span></li>
+                <li><i class="fas fa-search"></i> <span>Explorar</span></li>
+                <li><i class="fas fa-compass"></i> <span>Reels</span></li>
+                <li><i class="fas fa-paper-plane"></i> <span>Mensagens</span></li>
+                <li><i class="far fa-heart"></i> <span>Notificações</span></li>
+                <li><i class="fas fa-plus-square"></i> <span>Criar</span></li>
+                <li><img src="../img/logo-spencer-8.png" alt="Profile" class="nav-profile-img"> <span>Perfil</span></li>
+            </ul>
+            <div class="more-options">
+                <i class="fas fa-bars"></i> <span>Mais</span>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="profile-container">
+            <!-- Header Profile -->
+            <header class="profile-header">
+                <div class="profile-image-container">
+                    <div class="story-ring"></div>
+                    <img src="../img/logo-spencer-8.png" alt="Spencer Digital" class="profile-image">
+                </div>
+                
+                <div class="profile-info">
+                    <div class="profile-title">
+                        <h1 class="username">spencer.digital</h1>
+                        <button class="btn-follow">Seguir</button>
+                        <button class="btn-message">Mensagem</button>
+                        <i class="fas fa-ellipsis-h options-icon"></i>
+                    </div>
+                    
+                    <div class="profile-stats">
+                        <span><strong>42</strong> publicações</span>
+                        <span><strong>10.5k</strong> seguidores</span>
+                        <span><strong>120</strong> seguindo</span>
+                    </div>
+                    
+                    <div class="profile-bio">
+                        <span class="full-name">Spencer Development & Solutions</span>
+                        <p class="bio-text">
+                            🚀 Transformando ideias em realidade digital<br>
+                            💻 Dev Software & Design Criativo<br>
+                            ✨ Inovação & Tecnologia<br>
+                            👇 Comece seu projeto
+                        </p>
+                        <a href="../index.html" class="bio-link">spencerdigital.com.br</a>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Highlights -->
+            <div class="highlights">
+                <div class="highlight-item">
+                    <div class="highlight-circle"><i class="fas fa-code"></i></div>
+                    <span>Web</span>
+                </div>
+                <div class="highlight-item">
+                    <div class="highlight-circle"><i class="fas fa-mobile-alt"></i></div>
+                    <span>Apps</span>
+                </div>
+                <div class="highlight-item">
+                    <div class="highlight-circle"><i class="fas fa-palette"></i></div>
+                    <span>Design</span>
+                </div>
+                <div class="highlight-item">
+                    <div class="highlight-circle"><i class="fas fa-robot"></i></div>
+                    <span>I.A.</span>
+                </div>
+            </div>
+
+            <!-- Content Tabs -->
+            <div class="content-tabs">
+                <div class="tab active" onclick="switchTab(0)"><i class="fas fa-th"></i> <span>PUBLICAÇÕES</span></div>
+                <div class="tab" onclick="switchTab(1)"><i class="fas fa-film"></i> <span>REELS</span></div>
+                <div class="tab" onclick="switchTab(2)"><i class="fas fa-tag"></i> <span>MARCADOS</span></div>
+            </div>
+
+            <!-- TAB 1: POSTS (Grid) -->
+            <div id="posts-content" class="photo-grid tab-content active">
+                
+                <!-- Card 1: Services -->
+                <div class="grid-item">
+                    <div class="text-post card-gradient-bg">
+                        <h2 class="tp-highlight">Criação</h2>
+                        <ul class="tp-list">
+                            <li>Sites Institucionais</li>
+                            <li>Landing Pages</li>
+                            <li>Web Design</li>
+                            <li>Aplicativos Mobile</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 2: Philosophy -->
+                <div class="grid-item">
+                    <div class="text-post card-dark">
+                        <i class="fas fa-brain fa-2x" style="color: #2c4c6b; margin-bottom: 0.5rem;"></i>
+                        <p class="tp-content">
+                            <strong>I.A. + Code</strong><br>
+                            Soluções otimizadas, modernas e entregues no prazo.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 3: Project Types -->
+                <div class="grid-item">
+                    <div class="text-post">
+                        <h3 class="tp-title">Projetos</h3>
+                        <div style="width: 50px; height: 2px; background: #2c4c6b; margin: 0.5rem 0 1rem 0;"></div>
+                        <p class="tp-content">
+                            Desenvolvimento de Softwares Personalizados<br>
+                            Sites Institucionais<br>
+                            E-commerce
+                        </p>
+                    </div>
+                </div>
+
+                 <!-- Card 4: Systems Expertise -->
+                 <div class="grid-item">
+                    <div class="text-post">
+                        <h3 class="tp-title">Expertise</h3>
+                        <p class="tp-content">
+                            Sistemas de Gestão (ERP)<br>
+                            Automação Comercial<br>
+                            Controle Financeiro<br>
+                            Plataformas Web
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 5: Highlights/Values -->
+                <div class="grid-item">
+                    <div class="text-post card-dark">
+                        <i class="fas fa-gem" style="color: #e53e3e; margin-bottom: 0.5rem;"></i>
+                        <h3 class="tp-title">Valores</h3>
+                        <ul class="tp-list" style="font-size: 0.8rem;">
+                            <li>Criatividade & Dinamismo</li>
+                            <li>Rapidez na Entrega</li>
+                            <li>Segurança de Dados</li>
+                            <li>Seriedade Profissional</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 6: Contact -->
+                <div class="grid-item">
+                    <div class="text-post card-gradient-bg">
+                        <div class="tp-contact">
+                            <div>
+                                <i class="fab fa-whatsapp"></i>
+                                <span>(51) 99913-3041</span>
+                            </div>
+                            <div>
+                                <i class="fab fa-instagram"></i>
+                                <span>lcspencer_art_design</span>
+                            </div>
+                            <div>
+                                <i class="fab fa-github"></i>
+                                <span>Sundargopaldas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- TAB 2: REELS (Placeholder) -->
+            <div id="reels-content" class="reels-grid tab-content">
+                <div class="reel-item"><i class="fas fa-play"></i><div class="reel-views"><i class="fas fa-play"></i> 3.2k</div></div>
+                <div class="reel-item"><i class="fas fa-play"></i><div class="reel-views"><i class="fas fa-play"></i> 10.5k</div></div>
+                <div class="reel-item"><i class="fas fa-play"></i><div class="reel-views"><i class="fas fa-play"></i> 1.2k</div></div>
+                <div class="reel-item"><i class="fas fa-play"></i><div class="reel-views"><i class="fas fa-play"></i> 5.8k</div></div>
+            </div>
+
+            <!-- TAB 3: TAGGED (Placeholder) -->
+            <div id="tagged-content" class="photo-grid tab-content">
+                 <div class="grid-item">
+                    <div class="text-post card-dark">
+                        <i class="fas fa-user-circle fa-2x" style="color: #718096; margin-bottom: 0.5rem;"></i>
+                        <p class="tp-content" style="font-size: 0.9rem;">"Melhor parceiro de tecnologia!"<br><strong>@cliente_a</strong></p>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="text-post card-dark">
+                        <i class="fas fa-user-circle fa-2x" style="color: #718096; margin-bottom: 0.5rem;"></i>
+                        <p class="tp-content" style="font-size: 0.9rem;">"Transformou nossa ideia em realidade."<br><strong>@startup_x</strong></p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="logoExport" style="position: fixed; left: -2000px; top: 0; width: 1080px; height: 1080px; display: flex; align-items: center; justify-content: center; background: transparent;">
+        <div style="width: 920px; height: 920px; border-radius: 50%; background: #0f172a; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <div style="font-family: 'Sacramento', cursive; font-size: 320px; color: #ffffff; line-height: 1;">Spencer</div>
+            <div style="font-family: 'Poppins', sans-serif; font-size: 62px; letter-spacing: 2px; color: #e2e8f0; margin-top: -10px; white-space: nowrap;">DEVELOPMENT &amp; SOLUTIONS</div>
+        </div>
+    </div>
+
+    <!-- Control Buttons -->
+    <div id="controlButtons" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; display: flex; flex-direction: column; gap: 10px;">
+        
+        <!-- Video Recording Button -->
+        <button id="recordBtn" style="padding: 15px 25px; background: #e53e3e; color: white; border: none; border-radius: 50px; cursor: pointer; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.3); display: flex; align-items: center; gap: 10px; transition: all 0.3s;">
+            <i class="fas fa-video"></i> Gravar Vídeo (Reels)
+        </button>
+
+        <!-- Image Download Button -->
+        <button id="downloadBtn" style="padding: 15px 25px; background: #3887c9; color: white; border: none; border-radius: 50px; cursor: pointer; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.3); display: flex; align-items: center; gap: 10px; transition: all 0.3s;">
+            <i class="fas fa-camera"></i> Baixar Imagem Completa
+        </button>
+
+        <!-- Grid Download Button -->
+        <button id="downloadGridBtn" style="padding: 15px 25px; background: #805ad5; color: white; border: none; border-radius: 50px; cursor: pointer; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.3); display: flex; align-items: center; gap: 10px; transition: all 0.3s;">
+            <i class="fas fa-layer-group"></i> Baixar Kit Instagram (Cards + Bio)
+        </button>
+
+        <button id="downloadLogoBtn" style="padding: 15px 25px; background: #0f172a; color: white; border: none; border-radius: 50px; cursor: pointer; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.3); display: flex; align-items: center; gap: 10px; transition: all 0.3s;">
+            <i class="fas fa-image"></i> Baixar Logo (PNG)
+        </button>
+    </div>
+
+    <script>
+        // --- TABS LOGIC ---
+        function switchTab(index) {
+            const tabs = document.querySelectorAll('.tab');
+            const contents = document.querySelectorAll('.tab-content');
+            
+            tabs.forEach(t => t.classList.remove('active'));
+            contents.forEach(c => c.classList.remove('active'));
+            
+            tabs[index].classList.add('active');
+            contents[index].classList.add('active');
+        }
+
+        // --- STATS COUNTER ANIMATION ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const stats = document.querySelectorAll('.profile-stats span strong');
+            stats.forEach(stat => {
+                const finalValueStr = stat.innerText;
+                // Parse "10.5k" -> 10500
+                let finalValue = parseFloat(finalValueStr.replace('k', '')) * (finalValueStr.includes('k') ? 1000 : 1);
+                
+                let start = null;
+                const duration = 2000; // 2 seconds
+                
+                const step = (timestamp) => {
+                    if (!start) start = timestamp;
+                    const progress = Math.min((timestamp - start) / duration, 1);
+                    // Ease out effect
+                    const easeProgress = 1 - Math.pow(1 - progress, 3);
+                    
+                    const current = Math.floor(easeProgress * finalValue);
+                    
+                    // Format back
+                    if (finalValueStr.includes('k')) {
+                         stat.innerText = (current / 1000).toFixed(1) + 'k';
+                    } else {
+                        stat.innerText = current;
+                    }
+                    
+                    if (progress < 1) {
+                        window.requestAnimationFrame(step);
+                    } else {
+                        stat.innerText = finalValueStr; // Ensure exact end value
+                    }
+                };
+                
+                window.requestAnimationFrame(step);
+            });
+        });
+
+        // --- SCREEN RECORDING LOGIC ---
+        const recordBtn = document.getElementById('recordBtn');
+        let mediaRecorder;
+        let recordedChunks = [];
+
+        recordBtn.addEventListener('click', async () => {
+            if (recordBtn.classList.contains('recording')) {
+                // STOP RECORDING
+                mediaRecorder.stop();
+                recordBtn.classList.remove('recording');
+                recordBtn.innerHTML = '<i class="fas fa-video"></i> Gravar Vídeo (Reels)';
+                recordBtn.style.background = '#e53e3e';
+                return;
+            }
+
+            try {
+                // Request screen recording
+                const stream = await navigator.mediaDevices.getDisplayMedia({
+                    video: { mediaSource: "screen" },
+                    audio: false
+                });
+
+                mediaRecorder = new MediaRecorder(stream);
+
+                mediaRecorder.ondataavailable = (event) => {
+                    if (event.data.size > 0) {
+                        recordedChunks.push(event.data);
+                    }
+                };
+
+                mediaRecorder.onstop = () => {
+                    const blob = new Blob(recordedChunks, {
+                        type: "video/webm"
+                    });
+                    recordedChunks = [];
+                    const url = URL.createObjectURL(blob);
+                    const a = document.createElement("a");
+                    document.body.appendChild(a);
+                    a.style = "display: none";
+                    a.href = url;
+                    a.download = "spencer-instagram-reels.webm";
+                    a.click();
+                    window.URL.revokeObjectURL(url);
+                    
+                    // Stop all tracks to clear the "sharing" indicator
+                    stream.getTracks().forEach(track => track.stop());
+                };
+
+                mediaRecorder.start();
+                recordBtn.classList.add('recording');
+                recordBtn.innerHTML = '<i class="fas fa-stop-circle"></i> Parar Gravação';
+                recordBtn.style.background = '#333';
+
+                // Handle case where user stops via browser UI
+                stream.getVideoTracks()[0].onended = () => {
+                    if (recordBtn.classList.contains('recording')) {
+                        recordBtn.click(); // Trigger stop logic
+                    }
+                };
+
+            } catch (err) {
+                console.error("Error: " + err);
+            }
+        });
+
+        // --- GRID DOWNLOAD LOGIC (ZIP) ---
+        document.getElementById('downloadGridBtn').addEventListener('click', async function() {
+            const btn = this;
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Gerando ZIP...';
+            
+            // Hide controls
+            document.getElementById('controlButtons').style.display = 'none';
+            const sidebar = document.querySelector('.sidebar');
+            const originalSidebarDisplay = sidebar.style.display;
+            sidebar.style.display = 'none';
+
+            try {
+                const zip = new JSZip();
+                
+                // --- 1. CAPTURE GRID ITEMS ---
+                const gridItems = document.querySelectorAll('.grid-item');
+                for (let i = 0; i < gridItems.length; i++) {
+                    const item = gridItems[i];
+                    
+                    // Force border-radius to 0 for seamless grid
+                    const originalRadius = item.style.borderRadius;
+                    item.style.borderRadius = '0';
+                    
+                    const canvas = await html2canvas(item, {
+                        backgroundColor: null,
+                        scale: 2,
+                        logging: false,
+                        useCORS: true
+                    });
+                    
+                    // Restore border-radius
+                    item.style.borderRadius = originalRadius;
+                    
+                    const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
+                    zip.file(`Post_Grid_${i+1}.png`, blob);
+                }
+
+                // --- 2. CAPTURE BIO TEXT ---
+                const bioElement = document.querySelector('.profile-bio');
+                const bioText = bioElement ? bioElement.innerText : "Biografia não encontrada.";
+                zip.file("BIO.txt", bioText);
+
+                // --- 3. INSTRUCTIONS ---
+                zip.file("INSTRUCOES.txt", 
+                    "PARA O SEU PERFIL FICAR IGUAL AO SITE:\n\n" +
+                    "=========================================\n" +
+                    "1. POSTAGENS DO GRID (MOSAICO)\n" +
+                    "=========================================\n" +
+                    "O Instagram organiza os posts do mais novo para o mais antigo.\n" +
+                    "Para o mosaico funcionar, poste na ordem inversa (do último para o primeiro).\n\n" +
+                    "ORDEM DE UPLOAD:\n" +
+                    "1º upload: Post_Grid_6.png (Ficará no canto inferior direito)\n" +
+                    "2º upload: Post_Grid_5.png\n" +
+                    "3º upload: Post_Grid_4.png\n" +
+                    "4º upload: Post_Grid_3.png\n" +
+                    "5º upload: Post_Grid_2.png\n" +
+                    "6º upload: Post_Grid_1.png (Este será o mais recente e ficará no topo esquerdo)\n\n" +
+                    "=========================================\n" +
+                    "2. BIOGRAFIA\n" +
+                    "=========================================\n" +
+                    "O texto da sua bio está no arquivo 'BIO.txt'.\n" +
+                    "Copie e cole no seu perfil do Instagram."
+                );
+
+                // Generate ZIP
+                const content = await zip.generateAsync({type:"blob"});
+                saveAs(content, "spencer-instagram-kit.zip");
+                
+                btn.innerHTML = '<i class="fas fa-check"></i> Baixado!';
+            } catch (err) {
+                console.error(err);
+                btn.innerHTML = '<i class="fas fa-exclamation-circle"></i> Erro';
+            } finally {
+                // Restore controls
+                sidebar.style.display = originalSidebarDisplay;
+                document.getElementById('controlButtons').style.display = 'flex';
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                }, 3000);
+            }
+        });
+
+        document.getElementById('downloadLogoBtn').addEventListener('click', async function() {
+            const btn = this;
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Gerando...';
+
+            try {
+                const logo = document.getElementById('logoExport');
+                const canvas = await html2canvas(logo, {
+                    backgroundColor: null,
+                    scale: 2,
+                    logging: false,
+                    useCORS: true
+                });
+
+                const link = document.createElement('a');
+                link.download = 'spencer-logo-instagram.png';
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+
+                btn.innerHTML = '<i class="fas fa-check"></i> Salvo!';
+            } catch (err) {
+                console.error(err);
+                btn.innerHTML = '<i class="fas fa-exclamation-circle"></i> Erro';
+            } finally {
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                }, 2000);
+            }
+        });
+
+        // --- IMAGE DOWNLOAD LOGIC ---
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            const btn = this;
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Gerando...';
+            
+            // Hide controls for screenshot
+            document.getElementById('controlButtons').style.display = 'none';
+
+            // Elements to modify
+            const profileContainer = document.querySelector('.profile-container');
+            const glassContainer = document.querySelector('.glass-container');
+            const sidebar = document.querySelector('.sidebar');
+            const body = document.body;
+            
+            // Save original styles
+            const originalProfileOverflow = profileContainer.style.overflow;
+            const originalProfileHeight = profileContainer.style.height;
+            const originalGlassHeight = glassContainer.style.height;
+            const originalGlassOverflow = glassContainer.style.overflow;
+            const originalBodyOverflow = body.style.overflow;
+            const originalSidebarDisplay = sidebar.style.display;
+            
+            // Apply temporary styles for full capture
+            body.style.overflow = 'visible';
+            glassContainer.style.height = 'auto';
+            glassContainer.style.overflow = 'visible';
+            profileContainer.style.height = 'auto';
+            profileContainer.style.overflow = 'visible';
+            profileContainer.style.maxHeight = 'none';
+            sidebar.style.display = 'none'; // Hide sidebar for capture
+            
+            // Scroll to top
+            window.scrollTo(0,0);
+            
+            setTimeout(() => {
+                // Capture BODY to get background
+                html2canvas(document.body, {
+                    backgroundColor: null, 
+                    scale: 2,
+                    useCORS: true,
+                    logging: false,
+                    allowTaint: true,
+                    height: document.documentElement.scrollHeight,
+                    windowHeight: document.documentElement.scrollHeight,
+                    ignoreElements: (element) => {
+                        return element.id === 'controlButtons';
+                    }
+                }).then(canvas => {
+                    // Restore styles
+                    body.style.overflow = originalBodyOverflow;
+                    glassContainer.style.height = originalGlassHeight;
+                    glassContainer.style.overflow = originalGlassOverflow;
+                    profileContainer.style.height = originalProfileHeight;
+                    profileContainer.style.overflow = originalProfileOverflow;
+                    sidebar.style.display = originalSidebarDisplay;
+                    
+                    // Show controls again
+                    document.getElementById('controlButtons').style.display = 'flex';
+                    
+                    const link = document.createElement('a');
+                    link.download = 'spencer-instagram-profile.png';
+                    link.href = canvas.toDataURL('image/png');
+                    link.click();
+                    
+                    btn.innerHTML = '<i class="fas fa-check"></i> Salvo!';
+                    setTimeout(() => {
+                        btn.innerHTML = originalText;
+                    }, 2000);
+                }).catch(err => {
+                    console.error(err);
+                    btn.innerHTML = '<i class="fas fa-exclamation-circle"></i> Erro';
+                    // Restore styles
+                    body.style.overflow = originalBodyOverflow;
+                    glassContainer.style.height = originalGlassHeight;
+                    glassContainer.style.overflow = originalGlassOverflow;
+                    profileContainer.style.height = originalProfileHeight;
+                    profileContainer.style.overflow = originalProfileOverflow;
+                    sidebar.style.display = originalSidebarDisplay;
+                    
+                    document.getElementById('controlButtons').style.display = 'flex';
+                });
+            }, 500);
+        });
+    </script>
+</body>
+</html>
