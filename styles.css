@@ -20,12 +20,13 @@ nav {
     right: 0;
     z-index: 1000;
     padding: 0.4rem 3.5rem;
-    background: rgba(15, 23, 42, 0.9);
+    background: rgba(15, 23, 42, 0.78);
     backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.25);
     height: var(--navbar-height);
     transition: all 0.3s ease;
 }
@@ -82,8 +83,8 @@ nav {
 
 .nav-links {
     display: flex;
-    gap: 3.8rem;
-    padding-left: 3rem;
+    gap: 4.6rem;
+    padding-left: 3.5rem;
 }
 
 .nav-links a {
